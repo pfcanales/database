@@ -1,0 +1,24 @@
+$def with (todos)
+
+<h1>Ejemplo de como desplegar los datos de una Tabla</h1>
+
+
+<h2>Lista la tabla Completa</h2>
+
+<table>
+    $for todo in todos:
+        <tr>
+            <td>$todo.id</td>
+            <td>$todo.title</td>
+            <td>$todo.done</td>
+            <td><a> <a href="/delete/id" type="button" id ="deleteDep" value="Delete">Eliminar</a></td>
+        </tr>
+</table>
+
+<form method="post" action="add">
+   <p><input type="text" name="title" /></p>
+      <input type="submit" value="Agregar" />
+</form>
+
+
+
